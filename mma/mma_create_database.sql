@@ -19,8 +19,11 @@ INSERT INTO Product VALUES
 (4, 'android', 'Murach''s Android Programming', '57.50'),
 (5, 'html5', 'Murach''s HTML5 and CSS3', '54.50'),
 (6, 'oracle', 'Murach''s Oracle and PL/SQL', '54.50'),
-(7, 'javascript', 'Murach''s JavaScript and jQuery', '54.50');
-
+(7, 'javascript', 'Murach''s JavaScript and jQuery', '54.50'),
+(8,'python','Murach\'s Python Programming',57.50),
+(10,'dummy1','dummy1',99.11),
+(11,'dummy2','dummy2',99.12),
+(12,'dummy3','dummy3',99.13);
 -- create a user and grant privileges to that user
 GRANT SELECT, INSERT, DELETE, UPDATE
 ON mma.*
