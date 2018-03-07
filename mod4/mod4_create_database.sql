@@ -5,11 +5,11 @@ USE mod4;
 
 CREATE TABLE Customer (
   CustomerID	 INT 			PRIMARY KEY  AUTO_INCREMENT,
-  Name			 VARCHAR(50)    NOT NULL        
-  City           VARCHAR(50)    NOT NULL
-  State		     VARCHAR(2)     NOT NULL
-  Sales	         DECIMAL(14,2)  NOT NULL
-  Active		 BIT			
+  Name			 VARCHAR(50)    NOT NULL,        
+  City           VARCHAR(50)    NOT NULL,
+  State		     VARCHAR(2)     NOT NULL,
+  Sales	         DECIMAL(16,2)  NOT NULL,
+  Active		 BIT			NOT NULL,			
 );
 
 
