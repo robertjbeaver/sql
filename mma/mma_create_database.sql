@@ -5,10 +5,27 @@ USE mma;
 
 -- create the Product table
 CREATE TABLE Product (
-  ProductID      INT            PRIMARY KEY  AUTO_INCREMENT,
-  Code           VARCHAR(10)    NOT NULL     UNIQUE,
-  Description    VARCHAR(255)   NOT NULL,
-  ListPrice      DECIMAL(10,2)  NOT NULL
+  ProductID     INT            PRIMARY KEY  AUTO_INCREMENT,
+  Code          VARCHAR(10)    NOT NULL     UNIQUE,
+  Description	VARCHAR(255)   NOT NULL,
+  ListPrice     DECIMAL(10,2)  NOT NULL
+);
+
+CREATE TABLE Invoice (
+  InvoiceID		INT 		   PRIMARY KEY  AUTO_INCREMENT,
+  OrderNumber	VARCHAR(25)	   NOT	NULL	UNIQUE,
+  CustomerName	VARCHAR(25)	   NOT NULL,
+  OrderDate	 	DATE 		   NOT NULL,
+  Total	  		DECIMAL(10,2)  NOT NULL
+);
+
+CREATE TABLE LineItem (
+   LineItemID	INT 		   PRIMARY KEY  AUTO_INCREMENT,
+   InvoiceID	INT,
+   ProductID 	INT,
+   Quantity		INT 			NOT NULL,
+   FOREIGN KEY (InvoiceID)  REFERENCES Invoice (InvoiceID),
+   FOREIGN KEY (ProductID)  REFERENCES Product (ProductID)
 );
 
 -- insert some rows into the Product table
